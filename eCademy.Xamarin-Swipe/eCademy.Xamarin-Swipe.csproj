@@ -89,12 +89,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FragmentViewPagerActivity.cs" />
     <Compile Include="GridImageAdapter.cs" />
+    <Compile Include="ImageFragment.cs" />
+    <Compile Include="ImageFragmentAdapter.cs" />
     <Compile Include="ImageHelper.cs" />
     <Compile Include="ImagePagerAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScaleImageActivity.cs" />
+    <Compile Include="MonoDroidToolkit\ScaleImageView.cs" />
     <Compile Include="ViewPagerActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +108,15 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\FragmentViewPager.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ImageFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ScaleImage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -110,7 +124,6 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
   </ItemGroup>
@@ -133,7 +146,7 @@
     <AndroidResource Include="Resources\drawable-nodpi\darth_vlad.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-nodpi\Kfh1uRi.jpg" />
+    <AndroidResource Include="Resources\drawable-nodpi\face_paint.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-nodpi\Margaret_Hamilton.gif" />

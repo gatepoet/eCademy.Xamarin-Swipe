@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Util;
 using Android.Views;
+using Android.Content;
 
 namespace eCademy.Xamarin_Swipe
 {
@@ -21,7 +22,24 @@ namespace eCademy.Xamarin_Swipe
             var adapter = new GridImageAdapter(this, gridView);
             gridView.Adapter = adapter;
             gridView.ViewTreeObserver.AddOnGlobalLayoutListener(adapter);
+
+            gridView.ItemClick += GridView_ItemClick;
+            gridView.ItemLongClick += GridView_ItemLongClick;
             gridView.Drag += GridView_Drag; ;
+        }
+
+        private void GridView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            var intent = new Intent(this, typeof(FragmentViewPagerActivity));
+            intent.PutExtra("image_position", e.Position);
+            StartActivity(intent);
+        }
+
+        private void GridView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var intent = new Intent(this, typeof(ViewPagerActivity));
+            intent.PutExtra("image_position", e.Position);
+            StartActivity(intent);
         }
 
         private void GridView_Drag(object sender, View.DragEventArgs e)
